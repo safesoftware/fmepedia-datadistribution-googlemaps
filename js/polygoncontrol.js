@@ -31,7 +31,6 @@ function PolygonDrawTools(myGoogleMap){
 
 };
 
-
 PolygonDrawTools.prototype.drawPolygon = function(){
     var me = this;
     if(me.myPolygon){
@@ -45,6 +44,7 @@ PolygonDrawTools.prototype.clearPolygon = function(){
     me.myPolygon.setMap(null);
     me.myPolygon = null;
     $('#geom').attr('value', "");
+    $('#geom').change();
 };
 
 PolygonDrawTools.prototype.getPolygonCoords = function(){
