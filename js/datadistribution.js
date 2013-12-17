@@ -3,8 +3,8 @@ var lat = 49.264549;
 
 $(document).ready(function() {
 	dataDistGoogle.init({
-    host : "fmepedia2014.safe-software.fmecloud.com",
-    token : "bb88a213fe16651c403685af33b73d9ccf197562"
+    host : "fmepedia2014-safe-software.fmecloud.com",
+    token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
   });
 });
 
