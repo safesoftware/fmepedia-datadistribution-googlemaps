@@ -4,6 +4,7 @@ var lat = 49.264549;
 $(document).ready(function() {
 	dataDistGoogle.init({
     host : "fmepedia2014-safe-software.fmecloud.com",
+    hostVisible : "demos.safe.com",
     token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
   });
 });
@@ -15,6 +16,7 @@ var dataDistGoogle = (function () {
   var repository = 'Demos';
   var workspaceName = 'DataDownloadService';
   var host;
+  var hostVisible;
   var token;
 
   /**
@@ -73,7 +75,7 @@ var dataDistGoogle = (function () {
    */
   function buildURL(formInfo){
     var str = '';
-    str = 'http://' + host + '/' + repository + '/' + workspaceName + '.fmw?';
+    str = 'http://' + hostVisible + '/' + repository + '/' + workspaceName + '.fmw?';
     var elem = formInfo[0];
     for(var i = 0; i < elem.length; i++) {
       if(elem[i].type !== 'submit') {
@@ -122,6 +124,7 @@ var dataDistGoogle = (function () {
       var self = this;
       host = params.host;
       token = params.token;
+      hostVisible = params.hostVisible;
 
       googleMapsManager = new GoogleMapsManager();
       polygonControl = new PolygonDrawTools(googleMapsManager.myGoogleMap);
