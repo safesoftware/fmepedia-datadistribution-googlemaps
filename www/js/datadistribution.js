@@ -36,7 +36,7 @@ var dataDistGoogle = (function () {
         //populate drop-down options on page
         var section = $('<div />');
         var title = paramArray[i].description + ':';
-        var select = $('<select name=' + paramArray[i].name +'/>');
+        var select = $('<select class="input-customSize" name=' + paramArray[i].name +'/>');
         var optionArray = paramArray[i].options.option;
         for (var x = 0; x < optionArray.length; x++){
           var option = $('<option />', {value: optionArray[x].value, text: optionArray[x].displayAlias});
