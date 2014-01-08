@@ -24,7 +24,6 @@ hgroup, nav, section {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
 }
 
 /* This helps to make newer HTML5 elements behave like DIVs in older browers */
