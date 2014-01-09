@@ -55,7 +55,7 @@ var dataDistGoogle = (function () {
         var checkBoxes = $('<div id="' + paramArray[i].name + '" />');
         var optionArray = paramArray[i].options.option;
         for (var x = 0; x < optionArray.length; x++){
-          var box = $('<input type="checkbox" value="'+ optionArray[x].value + '" name="' + paramArray[i].name +'">' + optionArray[x].value + '</>');
+          var box = $('<input type="checkbox" value="'+ optionArray[x].value + '" name="' + paramArray[i].name +'"><element>' + optionArray[x].value + '</element></>');
           checkBoxes.append(box);
           checkBoxes.append($('<br/>'));
         }
