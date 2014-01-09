@@ -21,7 +21,11 @@ function GoogleMapsManager() {
 			]
 		},
 		zoomControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER,
 			style: google.maps.ZoomControlStyle.SMALL
+		},
+		panControlOptions: {
+			position: google.maps.ControlPosition.RIGHT_CENTER
 		}
 	}
 
