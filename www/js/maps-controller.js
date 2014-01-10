@@ -1,8 +1,3 @@
-/*To Do: 
-	-Split map initialization and polygon controls into two parts
-
-*/
-
 function GoogleMapsManager() {
 	//Initialise Google Maps
 	//

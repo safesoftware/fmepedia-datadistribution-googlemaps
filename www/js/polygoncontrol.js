@@ -72,19 +72,19 @@ PolygonDrawTools.prototype.polyIsComplete = function(){
 PolygonDrawTools.prototype.getPolygonCoordsXML = function(){
     var me = this;
     if (me.polyIsComplete){
-        var header = '<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<gt><lt>polygon<gt><lt>line<gt>';
-        var footer = '<lt><solidus>line<gt><lt><solidus>polygon<gt><lt><solidus>geometry<gt>';
-
-        var XMLString = header;
+        var textString = 'POLYGON(('
 
         var vertices = me.myPolygon.getPath();
         for(var i=0; i<vertices.getLength(); i++){
             var lat = vertices.getAt(i).lat();
             var lng = vertices.getAt(i).lng();
-            XMLString += "<lt>coord<space>x=<quote>" + lng + "<quote><space>y=<quote>" + lat + "<quote><solidus><gt>";
+            textString += lng + ' ';
+            textString += lat + ',';
         }
-        XMLString += footer;
-        return XMLString;
+
+        textString = textString.substring(0,textString.length - 1);
+        textString += '))';
+        return textString;
    }
    else{
     return "";
