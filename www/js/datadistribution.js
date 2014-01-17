@@ -4,7 +4,7 @@ var lat = 49.264549;
 $(document).ready(function() {
 	dataDistGoogle.init({
     host : "fmepedia2014-safe-software.fmecloud.com",
-    token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
+    token : "fb1c3ee6828e6814c75512dd4770a02e73d913b8"
   });
 });
 
